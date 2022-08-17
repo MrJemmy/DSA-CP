@@ -1,0 +1,18 @@
+Data Structure
+    - No. Structure Name
+        - DSName.cpp
+        - reletivefile.cpp
+        - Prectice Problems
+            - No. Prectice.cpp
+
+Algorithms
+    - No. Algorithm Name
+        - AlgoName.cpp
+        - reletivefile.cpp
+        - Prectice Problems
+            - No. Prectice.cpp
+
+Mathematics
+    - No. Problem Name
+        - ProblemName.cpp
+        - Reletivefile.cpp

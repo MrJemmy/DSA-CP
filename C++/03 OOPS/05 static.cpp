@@ -24,3 +24,5 @@ int main(){
 
     return 0;
 }
+
+// TODO : can other function can Access static variable or function?

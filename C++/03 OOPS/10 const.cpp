@@ -3,7 +3,7 @@ using namespace std;
 // interface
 // vertual function
 // friend function
-// https://whimsical.com/object-oriented-programming-cheatsheet-by-love-babbar-YbSgLatbWQ4R5paV7EgqFw
+// also more please fine more about this 
 int main(){
 
     // not done

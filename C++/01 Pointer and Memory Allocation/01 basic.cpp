@@ -14,8 +14,7 @@ int main()
     Test test;
     test.name1 = "jaimin";
     test.name2 = "gunjan"; 
-    
-    cout << test.name1 << endl;
+
     cout << typeid(test.name1).name() << endl; // TODO : how to find type of variable in c++
 
 

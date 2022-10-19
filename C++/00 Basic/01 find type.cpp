@@ -93,8 +93,8 @@ int main(){
     cout << typeid(ayza.output()).name() << endl;
 
 
-    string str = typeid(ayza).name();
-    cout << typeid(str).name() << endl;
+    string str = typeid(a).name();
+    cout << str << endl;
 
     return 0;
 }

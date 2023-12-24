@@ -33,6 +33,7 @@
 *.exe
 *.out
 *.app
+*.sh
 
 # By User
 DSA-and-CP.code-workspace

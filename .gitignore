@@ -39,5 +39,10 @@
 DSA-and-CP.code-workspace
 
 
-
+# Custom Chages
 /venv
+build/
+tempCodeRunnerFile.cpp
+output
+../*.c
+../../*.c

@@ -7,7 +7,7 @@ class Test{
     // to Access other variables we need to pass them throw params
     public:
         static int num;
-
+        
         static void set_num(int number){
             num = number;
             cout << "Done" << endl;

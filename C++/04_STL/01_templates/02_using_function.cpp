@@ -12,7 +12,7 @@ void bubbleSort_1(T a[], int n)
 }
 
 // with multipul argument
-template <class T, int U>  
+template <class T, int n>  
 void bubbleSort_2(T a[], int n)
 {
     for (int i = 0; i < n - 1; i++)
@@ -26,9 +26,13 @@ int main(){
     
     int a[5] = {50, 10, 40, 20, 30};
     int n = sizeof(a) / sizeof(a[0]);
-    bubbleSort_1<int>(a,n);
+    bubbleSort_1<int>(a, n);
     for(int i = 0; i<n ; i++){
         cout << a[i] << " ";
     }
+    // bubbleSort_2<int,>(a, n); // how to run bubbleSort
+    // for(int i = 0; i<n ; i++){
+    //     cout << a[i] << " ";
+    // }
     cout << endl;
 }

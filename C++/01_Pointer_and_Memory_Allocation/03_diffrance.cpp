@@ -5,17 +5,17 @@ using namespace std;
 
 void function(int& a){
     // it accept Value it self
-    cout << a << " and " << &a << endl;
+    cout << a << " and " << &a << endl;  // *a error
 }
 
 void function1(int& a){
     // it accept Value it self
-    cout << a << " and " << &a << endl;
+    cout << a << " and " << &a << endl;  // *a error
 }
 
 void function2(int* a){
     // it accept Address only
-    cout << *a << " and " << a << endl;
+    cout << a << " and " << &a << " and " << *a << endl;
 }
 
 
@@ -25,13 +25,16 @@ int main(){
     int *a2 = new int(11);
 
     function(a1);
+    // function(&a1); error
     function(*a2);
 
     function1(a1);
+    // function1(&a1); error
     function1(*a2);     // for "&a" in function pointer need to pass value which it is pointing *a
 
-    function2(&a1);     // for "*a" in function static variable needs to pass by address  &a
-    function2(a2);      
+    function2(a2);  
+    function2(&a1);     // for "*a" in function static variable needs to pass by address  &a    
+    // function2(*a2); error      
 
     return 0;
 }

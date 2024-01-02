@@ -22,15 +22,16 @@ class Student{
         // Copy Constructure
         Student(Student *obj){
             // default copy constructure do shallow copy of object
-            // custome copy constructure do deeo copy of object
+            // custome copy constructure do deep copy of object
             cout << "Copy Constructure Called" << endl;
             this->id = obj->id;
             this->name = obj->name;
         }
 
         // Distructure
-        ~Student(){
+        virtual ~Student(){
             // For Dynamic mamory allocation, we should call using "delete"
+            // In inheritance while calling child Distructure dosen't call parent Distructure, to call that parent must have virtual Distructure.
             cout << "Distructure is called " << endl;
         }
 };
@@ -41,7 +42,7 @@ void static_memory_obj(){
     Student obj1;                       // using default constucture 
     Student obj2(14, "jaimin");         // using parameterized constructure
     Student obj3(obj2);                 // using Copy constructure
-        //  need to pass address of object when copy constructure accepting reference of object 
+    //  need to pass address of object when copy constructure accepting reference of object 
 
     cout << obj3.name << endl;
     obj3.name = "Gunjan";

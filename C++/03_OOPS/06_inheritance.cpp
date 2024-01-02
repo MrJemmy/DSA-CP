@@ -4,9 +4,9 @@ using namespace std;
 class parent1{
     private:
     protected:
-        int p1protected;
+        string p1protected = "p1protected";
     public:
-        int p1public;
+        string p1public = "p1public";
 
         void print(){
             cout << "parent1" << endl;
@@ -17,9 +17,9 @@ class parent1{
 class parent2{
     private:
     protected:
-        int p2protected;
+        string p2protected = "p2protected";
     public:
-        int p2public;
+        string p2public = "p2public";
 
         void print(){
             cout << "parent2" << endl;
@@ -30,9 +30,9 @@ class parent2{
 class parent3{
     private:  
     protected:
-        int p3protected;
+        string p3protected = "p3protected";
     public:
-        int p3public;
+        string p3public = "p3public";
           
 };
 
@@ -58,9 +58,16 @@ class child2 : public parent1, public parent2{
 int main(){
 
     // To Avoid Inheritance Ambiguit we need to use class name with scope resolution operator "className::Var/Fun"
-    child2 obj;
+    child1 obj;
     obj.parent1::print();
-    obj.parent2::print();
+    // obj.parent2::print();  : can not access because in child1, parent2 and it's data is protected 
+    obj.p1public;
+    // obj.parent3::print(); : can not access because in child1, parent3 and it's data is private 
+
+    child2 obj2; // child2 class can access because of public inheritance
+    obj2.parent1::print();
+    obj2.parent2::print();
+    obj2.p1public;
 
     return 0;
 }

@@ -11,45 +11,19 @@ class Array{
         int size;
     
     public:
-        Array(T arr[], int s);
-        void print();
-};
-
-template <typename T> 
-Array<T>::Array(T arr[], int s){
-    ptr = new T[s];
-    size = s;
-    for (int i = 0; i < size; i ++){
-        ptr[i] = arr[i];
-    }
-}
-
-template <typename T>
-void Array<T>::print(){
-    for(int i=0; i<size; i++)
-        cout << " " << *(ptr + i);
-    cout << endl;
-}
-
-// 2. all in one class no "::" oprator
-template <typename T>
-class Aarray{
-    private:
-        T* ptr;
-        int size;
-    public:
-        Aarray(T arr[], int s){
+        Array(T arr[], int s){
             ptr = new T[s];
             size = s;
-            for (int i=0; i<size; i++){
+            for (int i = 0; i < size; i++){
                 ptr[i] = arr[i];
             }
         }
-
+        ~Array(){
+            delete []ptr;
+        }
         void print(){
-            for(int i=0; i<size; i++){
-                cout<< " " << *(ptr + i);
-            }
+            for(int i=0; i<size; i++)
+                cout << " " << *(ptr + i);
             cout << endl;
         }
 };
@@ -58,15 +32,24 @@ class Aarray{
 int main(){
 
     // sorting with templates
-    int a[5] = {50, 10, 40, 20, 30};
-    int a2[5] = {10, 20, 30, 40, 50};
+    int a[] = {50, 10, 40, 20, 30};
     int n = sizeof(a) / sizeof(a[0]);
+    
     // Templates with Class
-    Array<int> obj(a,n);
-    Aarray<int> *obj2 = new Aarray<int>(a2,n);
+    Array<int> *obj = new Array<int>(a,n);
+    
+    obj->print();
+    delete obj;
 
-    obj.print();
+    // sorting with templates
+    char s[] = {'j', 'a', 'i', 'm', 'i', 'n'};
+    int ss = sizeof(s) / sizeof(s[0]);
+
+    // Templates with Class
+    Array<char> *obj2 = new Array<char>(s, ss);
+
     obj2->print();
+    delete obj2;
 
     return 0;
 }

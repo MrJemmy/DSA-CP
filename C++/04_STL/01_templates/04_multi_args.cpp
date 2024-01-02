@@ -32,7 +32,7 @@ int main(){
     cout << p2.b << endl;
 
     const int a = 2000;
-    // we can pass only const values
+    // we can pass only const values :- can not pass variables
     passing_const_in_temp<int>();
     passing_const_in_temp<int, 1000>();
     passing_const_in_temp<int, a>();
